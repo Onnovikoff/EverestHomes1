@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Контакты</title>
+    <link rel="icon" type="image/png" href="icon.jpg" sizes="32x32">
+</head>
+<body>
+    <header>
+        <h1>Everest Homes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="catalog.html">Каталог недвижимости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="reviews.html">Отзывы клиентов</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-content">
+        <h2 >Наши контакты</h2>
+        <div class="contact-sections">
+            <div class="contact-section hoverable" id="address-section">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-details">
+                    <h3>Адрес</h3>
+                    <p>Ул.Тимирязеская д.32</p>
+                </div>
+            </div>
+            <div class="contact-section hoverable" id="phone-section">
+                <i class="fas fa-phone-alt"></i>
+                <div class="contact-details">
+                    <h3>Телефон</h3>
+                    <p>+7 (495) 951-3052</p>
+                </div>
+            </div>
+            <div class="contact-section hoverable" id="email-section">
+                <i class="far fa-envelope"></i>
+                <div class="contact-details">
+                    <h3>Почта</h3>
+                    <p>arhip888@veb.com</p>
+                </div>
+            </div>
+            <div class="contact-section" id="working-hours-section">
+                <i class="far fa-clock"></i>
+                <div class="contact-details">
+                    <h3>График работы</h3>
+                    <p>Пн-Пт: 9:00-18:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h2>Обратная связь</h2>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ваше сообщение:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="satisfaction">Оцените удовлетворенность (от 1 до 5):</label>
+                        <input type="number" id="satisfaction" name="satisfaction" min="1" max="5" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </form>
+                <div class="success-message" id="success-message">
+                    Спасибо за обращение!
+                </div>
+            </div>
+        </div>
+        <div >
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A738bda24dca735c7cf287868a4bb379641b4deae943369f44603c3fc0a5f6e64&amp;source=constructor" width="849" height="440" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    <div class="footer-navigation">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="catalog.html">Каталог недвижимости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы клиентов</a></li>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2023 Everest Homes. Все права защищены.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const phoneParagraph = document.querySelector('#phone-section p');
+        const addressParagraph = document.querySelector('#address-section p');
+        const emailParagraph = document.querySelector('#email-section p');
+    
+        function addHoverEffect(paragraph) {
+            paragraph.addEventListener('mouseover', function () {
+                paragraph.classList.add('hovered');
+            });
+    
+            paragraph.addEventListener('mouseout', function () {
+                paragraph.classList.remove('hovered');
+            });
+        }
+    
+        addHoverEffect(phoneParagraph);
+        addHoverEffect(addressParagraph);
+        addHoverEffect(emailParagraph);
+    
+        addressParagraph.addEventListener('click', function () {
+            window.open('https://maps.yandex.com?q=Ул.Тимирязеская д.32', '_blank');
+        });
+    
+        phoneParagraph.addEventListener('click', function () {
+            window.location.href = 'tel:+71234567890';
+        });
+    
+        emailParagraph.addEventListener('click', function () {
+            window.location.href = 'mailto:info@example.com';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const feedbackForm = document.getElementById('feedback-form');
+    const successMessage = document.getElementById('success-message');
+
+    // Загрузка данных из localStorage при загрузке страницы
+    const storedFormData = JSON.parse(localStorage.getItem('formData')) || {};
+    document.getElementById('name').value = storedFormData.name || '';
+    document.getElementById('email').value = storedFormData.email || '';
+    document.getElementById('phone').value = storedFormData.phone || '';
+    document.getElementById('message').value = storedFormData.message || '';
+
+    feedbackForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Получаем значения полей формы
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        // Отображаем сообщение об успешной отправке
+        successMessage.classList.add('show');
+
+        // Сохраняем данные в localStorage
+        const formData = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+
+        // Очищаем форму
+        feedbackForm.reset();
+
+        // Выводим сообщение об успешной отправке
+        alert('Ваше обращение было зарегистрировано и находится в обработке. Наши специалисты свяжутся с вами в ближайшее время!');
+
+        // Спрячем сообщение об успешной отправке через 3 секунды
+        setTimeout(() => {
+            successMessage.classList.remove('show');
+        }, 3000);
+    });
+});
+
+  
+    </script>
+</body>
+</html>

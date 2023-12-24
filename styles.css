@@ -1,0 +1,869 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
+}
+
+header {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #031825;
+}
+
+#main-content {
+    padding: 0px;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    text-align: center;
+    color: #3498db;
+}
+
+.services-container,
+.property-container,
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service img {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Добавленные стили для выравнивания текста под фотографией */
+.service h3,
+.service p {
+    margin: 10px 0;
+}
+
+.property img {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Дополнительные стили для выравнивания текста под фотографией */
+.property h3,
+.property p {
+    margin: 10px 0;
+}
+
+.service,
+.property,
+.review {
+    width: 45%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+}
+
+.service:hover,
+.property:hover,
+.review:hover {
+    transform: scale(1.01);
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-button:last-of-type {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin: 10px 10px;
+}
+
+.cta-button:hover {
+    color: #fff;
+    background-color: #2980b9;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.review {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out;
+    border-radius: 20px;
+    border: 2px solid #3498db;
+}
+
+.review img {
+    height: auto;
+    object-fit: cover;
+    border-radius: 100px;
+    margin-right: 20px;
+    border: 2px solid #3498db;
+}
+
+.review-content {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.review-details {
+    text-align: right;
+    margin-left: 15px;
+    color: #3498db;
+    flex-shrink: 0;
+}
+
+.review-details p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Добавленные стили для улучшения дизайна нижней навигации */
+.footer-navigation {
+    background: #2c3e50;
+    padding: 1em 0;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-navigation a:hover {
+    color: #3498db;
+}
+
+/* Дополнительные стили для улучшения дизайна футера */
+footer {
+    background: linear-gradient(to top, #2c3e50, #34495e);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    position: sticky;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Обновленные стили для прейскуранта */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    /* Новый шрифт Montserrat для заголовков */
+    color: #333;
+    /* Цвет заголовков */
+}
+
+.price-section {
+    padding: 40px 0;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.price-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.price-list {
+    width: 100%;
+    margin-top: 20px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.price-list th,
+.price-list td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.price-list th {
+    background-color: #3498db;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.price-list tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.price-list tr:hover {
+    background-color: #e2e6ea;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Общие стили для контактов */
+.contact-sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.contact-section {
+    margin: 0 10px 20px;
+    background-color: #fff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.contact-section i {
+    font-size: 36px;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.contact-details {
+    flex-grow: 1;
+}
+
+.contact-section h3 {
+    color: #3498db;
+}
+
+.hoverable p {
+    transition: color 0.3s ease-in-out;
+}
+
+.hoverable:hover p {
+    color: #1476b4; /* Измените цвет на ваш выбор */
+    cursor: pointer;
+}
+
+
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.contact-form {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.success-message.show {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.center-container {
+    text-align: center;
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
+    display: inline-block; /* Добавлено для центрирования */
+    width: 849px; /* задайте фиксированную ширину рамки */
+    height: 440px; /* задайте фиксированную высоту рамки */
+    border: 2px solid #3498db; /* задайте стиль рамки */
+   
+}
+
+.review-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.review-form-container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-form-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.review-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form-container label {
+    margin-bottom: 8px;
+    color: #343a40;
+}
+
+.review-form-container input,
+.review-form-container select,
+.review-form-container textarea {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s;
+}
+
+.review-form-container input:focus,
+.review-form-container select:focus,
+.review-form-container textarea:focus {
+    border-color: #343a40;
+}
+
+.review-form-container button {
+    padding: 12px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.review-form-container button:hover {
+    background-color: #1d2124;
+}
+
+#company-info {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+}
+
+#company-info h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+#company-info p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#company-info .info-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#company-info .info-section h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: left;
+}
+
+#company-info .info-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+/* Ваши текущие стили оставьте без изменений */
+
+/* Новые стили для блока с командой */
+#team-section {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#team-section h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.team-member {
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 4px solid #ccc;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.team-member h4 {
+    color: #333;
+    margin-bottom: 10px;
+    
+    font-weight: bold;
+}
+
+.team-member p {
+    color: #555;
+    line-height: 1.6;
+}
+.team-member .info-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ваши текущие стили оставьте без изменений */
+#advantages-section {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#advantages-section h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.advantage {
+    width: calc(45% - 20px);
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    background-color: #ecf0f1;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.advantage:hover {
+    transform: scale(1.01);
+}
+
+.advantage img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+.advantage h4 {
+    color: #3498db;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.advantage p {
+    color: #555;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+/* Новые стили для блока FAQ */
+#faq-section {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+#faq-section h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 150px;
+    transition: max-height 0.5s ease-out;
+}
+
+.faq-question {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.faq-answer {
+    color: #555555;
+    line-height: 1.6;
+    display: none;
+    font-size: 16px;
+    text-align: justify;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.active {
+    max-height: 500px;
+}
+
+/* Анимация для плавного изменения цвета вопроса и ответа при наведении */
+.faq-item:hover .faq-question,
+.faq-item.active .faq-question
+ {
+    background-color: #3498db;
+    color: #ffffff;
+}
+/* Добавленные стили для блока с вакансиями */
+/* Добавленные стили для блока с вакансиями */
+#vacancies-section {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Добавлено выравнивание по центру */
+    display: flex; /* Добавлено свойство для использования flexbox */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при необходимости */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+}
+
+#vacancies-section h3 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 100%;
+    text-align: center; /* Добавлено выравнивание заголовка по центру */
+}
+
+.vacancy-item {
+    width: calc(45% - 10px); /* Распределение элементов на 50% ширины с учетом отступов */
+    margin: 20px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.vacancy-item:hover {
+    transform: scale(1.01);
+}
+
+.vacancy-title {
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vacancy-description {
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.vacancy-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid#ccc;
+}
+
+.vacancy-salary {
+    color: #3498db;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.section-title-32
+{
+    color: #333333;
+}

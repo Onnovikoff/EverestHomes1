@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог недвижимости</title>
+    <link rel="icon" type="image/png" href="icon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Everest Homes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="catalog.html">Каталог недвижимости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="reviews.html">Отзывы клиентов</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <section>
+            <h2 class="section-title-32">Каталог недвижимости</h2>
+            <div class="property-container">
+                <!-- Предложения с главной странички -->
+                <div class="property" id="property1">
+                    <img src="property1.jpg" alt="Недвижимость 1">
+                    <h3>Квартира в центре города</h3>
+                    <p>Просторная квартира с отличным видом, расположенная в центре города. Удобные коммуникации и развитая инфраструктура.</p>
+                    <div class="price">Цена: $200,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(1)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(1)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property2">
+                    <img src="property2.jpg" alt="Недвижимость 2">
+                    <h3>Дом с садом и бассейном</h3>
+                    <p>Уютный дом с красивым садом и бассейном. Идеальное место для семейного отдыха и уединения.</p>
+                    <div class="price">Цена: $500,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(2)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(2)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property3">
+                    <img src="property3.jpg" alt="Недвижимость 3">
+                    <h3>Студия в новом жилом комплексе</h3>
+                    <p>Современная студия с новым ремонтом, расположенная в элитном жилом комплексе. Великолепные условия для комфортного проживания.</p>
+                    <div class="price">Цена: $150,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(3)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(3)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property4">
+                    <img src="property4.jpg" alt="Недвижимость 4">
+                    <h3>Коттедж в пригороде</h3>
+                    <p>Просторный коттедж с большим участком в живописном пригороде. Идеальное решение для любителей природы и уюта.</p>
+                    <div class="price">Цена: $700,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(4)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(4)">Дополнительная информация</button>
+                </div>
+
+                <!-- Новые предложения -->
+                <div class="property" id="property5">
+                    <img src="property5.jpg" alt="Недвижимость 5">
+                    <h3>Студия в историческом районе</h3>
+                    <p>Маленькая, но уютная студия в историческом районе города. Идеальный вариант для одиноких творческих личностей.</p>
+                    <div class="price">Цена: $100,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(5)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(5)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property6">
+                    <img src="property6.jpg" alt="Недвижимость 6">
+                    <h3>Апартаменты с видом на реку</h3>
+                    <p>Современные апартаменты с панорамными окнами и потрясающим видом на реку. Уникальное предложение для ценителей красивых пейзажей.</p>
+                    <div class="price">Цена: $250,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(6)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(6)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property7">
+                    <img src="property7.jpg" alt="Недвижимость 7">
+                    <h3>Двухэтажный пентхаус</h3>
+                    <p>Роскошный двухэтажный пентхаус в центре города. Элитное жилье для искушенных ценителей комфорта и роскоши.</p>
+                    <div class="price">Цена: $1,000,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(7)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(7)">Дополнительная информация</button>
+                </div>
+
+                <div class="property" id="property8">
+                    <img src="property8.jpg" alt="Недвижимость 8">
+                    <h3>Таунхаус с собственным двором</h3>
+                    <p>Уютный таунхаус с собственным двором, идеальное место для семейного проживания. Безопасный и тихий район.</p>
+                    <div class="price">Цена: $300,000</div>
+                    <button class="cta-button" onclick="bookPropertyView(8)">Записаться на просмотр</button>
+                    <button class="cta-button" onclick="additionalPropertyInfo(8)">Дополнительная информация</button>
+                </div>
+            </div>
+        </section>
+        <div class="calculator">
+            <h2 class="text-center mb-4">Калькулятор ипотеки</h2>
+            <div class="input-group">
+                <label for="loanAmount" class="form-label">Сумма ипотеки:</label>
+                <input type="number" id="loanAmount" class="form-control" placeholder="Введите сумму" />
+            </div>
+    
+            <div class="input-group">
+                <label for="loanTerm" class="form-label">Срок ипотеки (в годах):</label>
+                <input type="number" id="loanTerm" class="form-control" placeholder="Введите срок" />
+            </div>
+    
+            <div class="input-group">
+                <label for="interestRate" class="form-label">Процентная ставка:</label>
+                <input type="number" id="interestRate" class="form-control" placeholder="Введите ставку" />
+            </div>
+    
+            <button onclick="calculateMortgage()" class="btn btn-primary">Рассчитать ипотеку</button>
+    
+            <div id="result" class="mt-3"></div>
+        </div>
+    </div>
+    <div class="footer-navigation">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="catalog.html">Каталог недвижимости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы клиентов</a></li>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 Everest Homes. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function bookPropertyView(propertyId) {
+            const propertyName = document.getElementById(`property${propertyId}`).querySelector('h3').innerText;
+            alert(`Вы успешно записались на просмотр предложения: ${propertyName}`);
+            // Дополнительные действия при записи на просмотр
+        }
+
+        function additionalPropertyInfo(propertyId) {
+            const propertyName = document.getElementById(`property${propertyId}`).querySelector('h3').innerText;
+            const propertyDescription = getPropertyDescription(propertyId);
+            alert(`C дополнительной информацией по предложению "${propertyName}" вы можете ознакомиться в консоли.`);
+            console.log(`Дополнительная информация по предложению "${propertyName}": ${propertyDescription}`);
+            // Дополнительные действия при запросе дополнительной информации
+        }
+
+        function getPropertyDescription(propertyId) {
+            switch (propertyId) {
+                case 1:
+                    return "Квартира в центре города — просторная квартира с отличным видом, расположенная в центре города. Удобные коммуникации и развитая инфраструктура.";
+
+                case 2:
+                    return "Дом с садом и бассейном — уютный дом с красивым садом и бассейном. Идеальное место для семейного отдыха и уединения.";
+
+                case 3:
+                    return "Студия в новом жилом комплексе — современная студия с новым ремонтом, расположенная в элитном жилом комплексе. Великолепные условия для комфортного проживания.";
+
+                case 4:
+                    return "Коттедж в пригороде — просторный коттедж с большим участком в живописном пригороде. Идеальное решение для любителей природы и уюта.";
+
+                case 5:
+                    return "Студия в историческом районе — маленькая, но уютная студия в историческом районе города. Идеальный вариант для одиноких творческих личностей.";
+
+                case 6:
+                    return "Апартаменты с видом на реку — современные апартаменты с панорамными окнами и потрясающим видом на реку. Уникальное предложение для ценителей красивых пейзажей.";
+
+                case 7:
+                    return "Двухэтажный пентхаус — роскошный двухэтажный пентхаус в центре города. Элитное жилье для искушенных ценителей комфорта и роскоши.";
+
+                case 8:
+                    return "Таунхаус с собственным двором — уютный таунхаус с собственным двором, идеальное место для семейного проживания. Безопасный и тихий район.";
+            }
+        }
+        
+        function calculateMortgage() {
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const loanTerm = parseInt(document.getElementById('loanTerm').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value);
+
+            if (isNaN(loanAmount) || isNaN(loanTerm) || isNaN(interestRate)) {
+                alert('Пожалуйста, введите числовые значения.');
+                return;
+            }
+
+            const monthlyInterestRate = (interestRate / 100) / 12;
+            const numberOfPayments = loanTerm * 12;
+
+            const monthlyPayment = (loanAmount * monthlyInterestRate) /
+                (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+            const totalPayment = monthlyPayment * numberOfPayments;
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `Ежемесячный платеж: $${monthlyPayment.toFixed(2)}<br>
+                                       Общая выплата: $${totalPayment.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>

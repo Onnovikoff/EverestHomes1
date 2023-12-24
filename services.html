@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="icon" type="image/png" href="icon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Everest Homes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="catalog.html">Каталог недвижимости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="reviews.html">Отзывы клиентов</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <section>
+            <h2 class="section-title-32">Наши Услуги</h2>
+            <div class="services-container">
+                <!-- Основные услуги -->
+                <div class="service" id="service1">
+                    <img src="service1.jpg" alt="Услуга 1">
+                    <h3>Продажа недвижимости</h3>
+                    <p>Помощь в продаже вашей недвижимости.</p>
+                    <div class="price">Цена: от $1000</div>
+                    <button class="cta-button" onclick="bookService(1)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(1)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service2">
+                    <img src="service2.jpg" alt="Услуга 2">
+                    <h3>Покупка недвижимости</h3>
+                    <p>Найти и купить идеальное жилье для вас.</p>
+                    <div class="price">Цена: от $1200</div>
+                    <button class="cta-button" onclick="bookService(2)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(2)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service3">
+                    <img src="service3.jpg" alt="Услуга 3">
+                    <h3>Аренда жилья</h3>
+                    <p>Помощь в поиске и аренде жилья.</p>
+                    <div class="price">Цена: от $500 в месяц</div>
+                    <button class="cta-button" onclick="bookService(3)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(3)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service4">
+                    <img src="service4.jpg" alt="Услуга 4">
+                    <h3>Консультации по недвижимости</h3>
+                    <p>Экспертные советы по всем вопросам недвижимости.</p>
+                    <div class="price">Цена: от $50 за консультацию</div>
+                    <button class="cta-button" onclick="bookService(4)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(4)">Дополнительная информация</button>
+                </div>
+
+                <!-- Дополнительные услуги -->
+                <div class="service" id="service5">
+                    <img src="service5.jpg" alt="Услуга 5">
+                    <h3>Юридическое сопровождение сделок</h3>
+                    <p>Помощь в оформлении документов и сопровождении сделок.</p>
+                    <div class="price">Цена: от $200</div>
+                    <button class="cta-button" onclick="bookService(5)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(5)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service6">
+                    <img src="service6.jpg" alt="Услуга 6">
+                    <h3>Оценка рыночной стоимости</h3>
+                    <p>Экспертная оценка рыночной стоимости вашей недвижимости.</p>
+                    <div class="price">Цена: от $150</div>
+                    <button class="cta-button" onclick="bookService(6)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(6)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service7">
+                    <img src="service7.jpg" alt="Услуга 7">
+                    <h3>Помощь в получении ипотеки</h3>
+                    <p>Консультации и помощь в оформлении ипотечных сделок.</p>
+                    <div class="price">Цена: бесплатно (при условии оформления ипотеки через нас)</div>
+                    <button class="cta-button" onclick="bookService(7)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(7)">Дополнительная информация</button>
+                </div>
+
+                <div class="service" id="service8">
+                    <img src="service8.jpg" alt="Услуга 8">
+                    <h3>Индивидуальный подбор жилья</h3>
+                    <p>Помощь в поиске жилья с учетом всех ваших предпочтений.</p>
+                    <div class="price">Цена: от $300</div>
+                    <button class="cta-button" onclick="bookService(8)">Записаться на услугу</button>
+                    <button class="cta-button" onclick="additionalInfo(8)">Дополнительная информация</button>
+                </div>
+            </div>
+        </section>
+        <section class="price-section">
+            <h2 class="section-title">Прейскурант цен</h2>
+            <div class="price-list-container">
+                <table class="price-list">
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Цена</th>
+                    </tr>
+                    <tr>
+                        <td>Продажа недвижимости</td>
+                        <td>от $1000</td>
+                    </tr>
+                    <tr>
+                        <td>Покупка недвижимости</td>
+                        <td>от $1200</td>
+                    </tr>
+                    <tr>
+                        <td>Аренда жилья</td>
+                        <td>от $500 в месяц</td>
+                    </tr>
+                    <tr>
+                        <td>Консультации по недвижимости</td>
+                        <td>от $50 за консультацию</td>
+                    </tr>
+                    <tr>
+                        <td>Юридическое сопровождение сделок</td>
+                        <td>от $200</td>
+                    </tr>
+                    <tr>
+                        <td>Оценка рыночной стоимости</td>
+                        <td>от $150</td>
+                    </tr>
+                    <tr>
+                        <td>Помощь в получении ипотеки</td>
+                        <td>бесплатно (при условии оформления ипотеки через нас)</td>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальный подбор жилья</td>
+                        <td>от $300</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div class="footer-navigation">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="catalog.html">Каталог недвижимости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы клиентов</a></li>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2023 Everest Homes. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function bookService(serviceId) {
+            const serviceName = document.getElementById(`service${serviceId}`).querySelector('h3').innerText;
+            alert(`Вы успешно записались на услугу: ${serviceName}`);
+            // Дополнительные действия при записи на услугу
+        }
+
+        function additionalInfo(serviceId) {
+            const serviceName = document.getElementById(`service${serviceId}`).querySelector('h3').innerText;
+            const serviceDescription = getServiceDescription(serviceId);
+            alert(`С информацией об услуге "${serviceName}" вы можете ознакомиться в консоли.`);
+            console.log(`Дополнительная информация об услуге "${serviceName}": ${serviceDescription}`);
+            // Дополнительные действия при запросе дополнительной информации
+        }
+
+        function getServiceDescription(serviceId) {
+            switch (serviceId) {
+                case 1:
+                    return "Продажа недвижимости — наша команда профессиональных риелторов поможет вам успешно реализовать вашу недвижимость. Мы обеспечим всестороннюю поддержку на каждом этапе сделки, начиная с оценки рыночной стоимости и заканчивая подписанием договора.";
+
+                case 2:
+                    return "Покупка недвижимости — найдем для вас идеальное жилье, соответствующее всем вашим требованиям. Наши эксперты помогут вам принять взвешенное решение, проведут переговоры и оформят все необходимые документы.";
+
+                case 3:
+                    return "Аренда жилья — ищете жилье для аренды? Мы предоставим вам наилучшие варианты, соответствующие вашим предпочтениям. Надежные договоры и прозрачные условия аренды — ваш комфорт наш приоритет.";
+
+                case 4:
+                    return "Консультации по недвижимости — наши эксперты готовы ответить на все ваши вопросы, касающиеся недвижимости. Получите профессиональные советы по покупке, продаже, аренде и владению недвижимостью.";
+
+                case 5:
+                    return "Юридическое сопровождение сделок — обеспечьте безопасность ваших сделок с недвижимостью, доверив их нашим юристам. Мы оформим все необходимые документы, проверим юридическую чистоту сделки и защитим ваши интересы.";
+
+                case 6:
+                    return "Оценка рыночной стоимости — узнайте реальную стоимость вашей недвижимости от наших экспертов. Мы проведем комплексную оценку, учитывая рыночные тенденции и особенности вашего объекта.";
+
+                case 7:
+                    return "Помощь в получении ипотеки — мечтаете о своем жилье, но не хватает средств? Мы поможем вам с оформлением ипотеки, подберем выгодные условия и проведем вас через весь процесс получения жилищного кредита.";
+
+                case 8:
+                    return "Индивидуальный подбор жилья — наши специалисты помогут вам найти идеальное жилье, учитывая все ваши предпочтения. Это персонализированная услуга, которая обеспечит вас комфортным и уникальным жилищем.";
+            }
+        }
+    </script>
+</body>
+
+</html>
